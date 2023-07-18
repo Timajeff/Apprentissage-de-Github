@@ -1,0 +1,13 @@
+# Modification du fichier actions.md
+git add actions.md
+$ git commit -m "ft - Jira#15: Mise en place du formulaire HTML"
+# Modification du fichier actions.md
+git add actions.md
+$ git commit -m "ft - Jira#15: Traitement du formulaire en PHP"
+# Modification du fichier actions.md
+git add actions.md
+$ git commit -m "ft - Jira#15: Mise à jour de la base de données"
+$ git log
+
+uploads/*.pdf
+uploads/*.jpeg
