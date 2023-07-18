@@ -1,0 +1,16 @@
+Rendez-vous sur la page https://github.com/new
+
+# 2
+git remote add origin git@github.com:sarramegnag/exercice-git-merge.git
+
+# 3
+git push --set-upstream origin master
+git checkout bugfix
+git push --set-upstream origin bugfix
+
+# 5
+git fetch origin
+git checkout other-bugfix
+
+# 6
+git push origin --delete other-bugfix

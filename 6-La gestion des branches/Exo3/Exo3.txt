@@ -1,0 +1,29 @@
+# 1
+echo -e "Hello world\n" > README.md
+# 2
+git add .
+git commit -m"Add README.md"
+# 3
+git checkout -b bugfix
+sed -i s/world/world./g README.md
+# 4
+git commit -am"Add point at the end of README.md"
+# 5
+git checkout master
+sed -i s/world/world\!/g README.md
+# 6
+git commit -am"Add exclamation mark at the end of README.md"
+# 7
+git merge bugfix
+# 8
+vi README.md
+
+Ne gardez que la ligne 4 (bloc bugfix).
+
+README.md avec conflits corrigés :
+
+# 8 bis
+2
+git add .
+3
+git commit

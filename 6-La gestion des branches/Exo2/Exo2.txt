@@ -1,0 +1,18 @@
+# On supprime la branche espace-client
+git branch -D espace-client
+# On se place sur la branche tunnel-achat et on la renomme en purchase-tunnel
+git checkout tunnel-achat && git branch -m purchase-tunnel
+# On renomme les branches mise-au-panier en cart-management et paiement en payment-info
+git branch -m mise-au-panier cart-management
+git branch -m paiement payment-info
+# On crée la branche shipment-info à partir de purchase-tunnel
+git checkout -b shipment-info purchase-tunnel
+# On change de branche, on crée un fichier README.md vide et on ajoute un commit
+git checkout payment-info
+touch README.md
+git add README.md
+git commit -m"Add readme file"
+# On passe sur la branche master et on constate bien que notre commit et notre fichier n'existent pas
+git checkout master
+git log --oneline
+ls README.md

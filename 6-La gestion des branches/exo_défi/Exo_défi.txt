@@ -1,0 +1,50 @@
+
+Solution
+CTRL+C pour copier, CTRL+V pour coller
+# 2
+git add index.html
+git commit -m"Add fruit list"
+# 3
+git remote add origin git@github.com:<username>/defi-git.git
+git push -u origin master
+# 4
+git checkout -b fix-typos
+sed -i 's/Pome/Pomme/g; s/Carote/Carotte/g; s/Tommate/Tomate/g; s/Cerisse/Cerise/g' index.html
+# 5
+git add index.html
+git commit -m"Fix typos in fruit list"
+git push -u origin fix-typos
+# 6
+git checkout -b remove-vegetables master
+sed -i '/Carote/d; /Salade/d; /Tomate/d' index.html
+# 7
+git add index.html
+git commit -m"Remove vegetables from fruit list"
+git push -u origin remove-vegetables
+# 8
+git checkout master
+git merge fix-typos
+git push
+# 9
+git merge remove-vegetables
+# 10
+# Corrigez les conflits (cf fichier plus bas)
+git add index.html
+git commit
+# Validez le commit de merge
+git push
+# 11
+git push origin --delete fix-typos && git branch -D fix-typos
+git push origin --delete remove-vegetables && git branch -D remove-vegetables
+
+
+
+$ git log --oneline
+c914a36 (HEAD -> master, origin/master) Merge branch 'remove-vegetables'
+43eb496 Remove vegetables from fruit list
+032943a Fix typos in fruit list
+38c904e Add fruit list
+
+$ git branch -a
+* master
+  remotes/origin/master

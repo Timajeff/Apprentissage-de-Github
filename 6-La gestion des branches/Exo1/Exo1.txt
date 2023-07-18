@@ -1,0 +1,10 @@
+# 1
+git checkout master
+git branch tunnel-achat
+# 2
+git checkout tunnel-achat
+git branch mise-au-panier
+git branch paiement
+# 3
+git checkout master
+git branch espace-client
