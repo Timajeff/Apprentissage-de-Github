@@ -1,0 +1,6 @@
+# 1
+ping /?
+# 2
+ping -n 1 google.fr
+# 3
+ping -n 1 216.58.213.163

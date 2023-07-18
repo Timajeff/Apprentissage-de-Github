@@ -1,0 +1,29 @@
+Mise en place de l'arborescence pour Windows
+
+CTRL+C pour copier, CTRL+V pour coller
+mkdir embauches facturation
+echo '' > facturation.md
+echo '' > old_facturation.md
+cd embauches
+mkdir louise michel
+cd louise
+echo '' > embauche.md
+
+Opérations pour Windows
+Depuis le répertoire embauches/ :
+
+CTRL+C pour copier, CTRL+V pour coller
+# 1
+move facturation.md facturation\
+# 2
+del old_facturation.md
+# 3
+move embauches\louise\embauche.md embauches\louise\informations.md
+# 4
+copy embauches\louise\informations.md embauches\michel\informations.md
+# 5
+mkdir embauches\nicolas\
+# 6
+echo '' > embauches\nicolas\salaire.md
+# Vérification
+tree /F

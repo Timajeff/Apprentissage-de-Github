@@ -1,0 +1,15 @@
+# 1
+mkdir exercice
+# 2
+cd exercice
+# 3
+echo # Contenu de mon fichier README.md > README
+# 4
+move README README.md
+# 5
+type README.md
+# 6
+del README.md
+# 7
+cd ..
+rmdir exercice
